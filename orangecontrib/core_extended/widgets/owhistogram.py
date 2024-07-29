@@ -25,7 +25,7 @@ class OWHistogram(widget.OWWidget, ConcurrentWidgetMixin):
     icon = "icons/histogram.svg"
     keywords = "histogram"
     id = "orangecontrib.core_extended.widgets.owhistogram"
-    
+
 
     class Inputs:
         data = widget.Input("Data", Orange.data.Table, default=True)
@@ -37,9 +37,10 @@ class OWHistogram(widget.OWWidget, ConcurrentWidgetMixin):
 
     MIN_BINS = 2
     DEFAULT_BINS = 100
-    MAX_BINS = 200
+    MAX_BINS = 999
 
     want_main_area = False
+    resizing_enabled = False
 
 
     settingsHandler = settings.DomainContextHandler()
@@ -51,14 +52,6 @@ class OWHistogram(widget.OWWidget, ConcurrentWidgetMixin):
 
 
     hist_model = DomainModel(DomainModel.MIXED, valid_types=Orange.data.ContinuousVariable)
-
-
-    class Error(widget.OWWidget.Error):
-        pass
-
-
-    class Warning(widget.OWWidget.Warning):
-        pass
 
 
     def __init__(self):

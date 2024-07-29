@@ -51,10 +51,7 @@ class IntLineEdit(QLineEdit):
         
     def validate(self):
         return self.validator.validate(self.text(), self.cursorPosition())[0]
-        print(state)
-        print(QIntValidator.Acceptable, QIntValidator.Intermediate, QIntValidator.Invalid)
         
-
 
     def keyPressEvent(self, event):
         if event.key() == IntLineEdit.FAST_KEY:
