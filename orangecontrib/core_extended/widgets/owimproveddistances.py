@@ -47,7 +47,7 @@ class DistanceRunner:
 class OWImprovedDistances(widget.OWWidget, ConcurrentWidgetMixin):
     name = "Improved Distances"
     description = "Compute a matrix of pairwise distances."
-    icon = "icons/distance.svg"
+    icon = "icons/improved_distances.svg"
     keywords = "distances"
     id = "orangecontrib.core_extended.widgets.owimproveddistances"
 
